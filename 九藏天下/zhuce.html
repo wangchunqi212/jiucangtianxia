@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/zhuce.css"/>
+	</head>
+	
+	<body>
+		<header><!--header-->
+			<a href="shouye.html"><img src="img/logo.png"/></a>	
+			<h3><b>用户注册</b></h3>
+			<p>已有九藏商城账号，<a href="denglu.html">直接登录</a></p>
+		</header><!--header-->
+		
+		<div class="main"><!--main-->
+			<form action="">
+				<div class="formpart"><!--formpart-->
+					<p>
+						<span></span>
+						<input id="phone" type="text" placeholder="请输入手机号" />
+						<label id="error">
+							<i></i>
+							手机号输入有误
+						</label>
+					</p>
+					<p>
+						<span></span>
+						<input id="pwd" type="password" placeholder="密码" />
+						<label id="error2">
+							<i></i>
+							请输入6-32位的字符
+						</label>
+					</p>
+					<div class="follow"><!--follow-->
+						<h4>关注领域</h4>
+						<span></span>
+						<ul id="selectlist">
+							<li>家居装饰画</li>
+							<li>金银币</li>
+							<li>纪念币</li>
+							<li>邮票邮品</li>
+							<li>钱币纸钞</li>
+							<li>珠宝玉石</li>
+							<li>书法绘画</li>
+							<li>金银铜章</li>
+							<li>邮币投资</li>
+						</ul>
+					</div><!--follow-->
+					<p class="agreement"><input type="checkbox" checked /><a href="#">我已阅读并同意《九藏用户注册协议》</a></p>
+					<p class="submit"><input type="submit" value="注册" /></p>
+				</div><!--formpart-->
+			</form>
+		</div><!--main-->
+		
+			<div class="foot"><!--foot-->
+		<ul>
+			<li>
+				<a href="#">关于我们</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="#">联系我们</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="#">文化理念</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="#">诚征英才</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="#">法律支持</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="#">九藏大事记</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="#">艺术家入住</a>
+			</li>
+		</ul>
+		
+		<p>Copyright © 2009-2016 北京九藏天下文化发展有限公司 版权所有</p>
+	</div><!--foot-->
+	</body>
+	
+</html>
+<script type="text/javascript">
+	window.onload = function(){
+		var oPhone = document.getElementById("phone");
+		var oPwd = document.getElementById("pwd");
+		var oError = document.getElementById("error");
+		var oError2 = document.getElementById("error2");
+		var oLi = document.querySelectorAll("#selectlist li")
+		
+		
+		oPhone.onblur = function(){
+			var sPhone = oPhone.value;
+			var regPhone = /^[0-9]{11}$/;
+			if(regPhone.test(sPhone)){
+				oError.style.display = "none";
+			}else{
+				oError.style.display = "inline-block";
+			}
+		}
+		
+		oPwd.onblur = function(){
+			var sPwd = oPwd.value;
+			var regPwd = /^[0-9a-zA-Z]{6,32}$/;
+			if(regPwd.test(sPwd)){
+				oError2.style.display = "none";
+			}else{
+				oError2.style.display = "inline-block";
+			}
+		}
+	}
+	
+</script>

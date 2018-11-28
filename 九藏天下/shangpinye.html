@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/shangpinye.css"/>
+	</head>
+	<body>
+		<div class="rightline"></div>
+		<div class="contact"><!--contact-->
+			<div class="contactqq">
+				<i></i>
+			</div>
+			<div class="contactcall">
+				<em>400-052-6999</em>
+				<i></i>
+			</div>
+		</div><!--contact-->
+		
+		<div class="gotop" id="gotop"><!--gotop-->
+				<em>顶部</em>
+				<i></i>
+		</div><!--gotop-->
+		
+		
+		<script src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				$("#gotop").click(function(){
+                  $('body,html').animate({
+                  	scrollTop:0
+                  },1000);
+				})
+			})
+			
+			
+		</script>
+		
+		
+		<div class="header-bg"><!--header-bg-->
+		<header><!--header-->
+			<p>欢迎来到九藏商城！请<a href="denglu.html">登录</a></p>
+			<a href="zhuce.html">免费注册</a>
+			<ul>
+				<li><i></i><a href="#">我的订单</a></li>
+				<li>
+					<em></em>
+					<i></i><a href="">关注九藏</a><span></span>
+					<div class="topcode"><!--二维码-->
+						<img src="img/shangpinxiangqing/topcode.jpg"/>
+						<p>九藏商城</p>
+					</div><!--二维码-->
+				</li>
+				<li>
+					<em></em>
+					<i></i><a href="">客户服务</a><span></span>
+					<div class="servehide">
+						<a href="#">售后服务</a>
+						<a href="#">联系我们</a>
+					</div>
+				</li>
+			</ul>
+		</header><!--header-->
+	</div><!--header-bg-->
+
+
+		<div class="shopsearch"><!--shopsearch-->
+			<a href="shouye.html"><img src="img/logo.png"/></a>
+			<div class="searchform"><!--searchform-->
+				<form action="">
+					<input type="search" placeholder="请输入关键词..." />
+					<button>搜 索</button>
+				</form>
+				
+				<ul>
+					<li><a href="#">澳门生肖10元对钞</a></li>
+					<li><a href="#">高铁普通纪念币</a></li>
+					<li><a href="#">四景山水图特种邮票</a></li>
+					<li><a href="#">民族英雄纪念邮票</a></li>
+					<li><a href="#">世界六大投资银币</a></li>
+					<li><a href="#">金运昌</a></li>
+					<li><a href="#">第四套人民币</a></li>
+				</ul>
+			</div><!--searchform-->
+			
+			<div class="shopbus"><!--shopbus-->
+				<em></em>
+				<i></i>
+				<a href="#">我的购物车</a>
+				<span></span>
+				<strong>0</strong>
+				<div class="shopbushide"><!--shopbushide-->
+					<b></b>
+					购物车还没有商品，赶紧选购吧！
+				</div><!--shopbushide-->
+			</div><!--shopbus-->
+		</div><!--shopsearch-->
+		
+		
+	<div class="nav-bg"><!--nav-bg-->
+		<div class="nav"><!--nav-->
+			<p>
+				<a href="#">全部商品分类</a>
+			</p>
+			<ul>
+				<li><a href="#">商城</a></li>
+				<li class="hasnew">
+					<a href="#">艺术家</a>
+					<span></span>
+				</li>
+				<li><a href="#">好捡漏</a></li>
+				<li><a href="#">学院</a></li>
+				<li><a href="#">出手</a></li>
+				<li><a href="#">礼品</a></li>
+				<li><a href="#">邮币投资</a></li>
+			</ul>
+		</div><!--nav-->
+	</div><!--nav-bg-->
+
+		
+		
+		<div class="goods"><!--goods-->
+			<div class="goodsheader"><!--goodsheader-->
+				<a href="#">首页</a>
+				<span>></span>
+				<a href="#">珠宝玉石</a>
+				<span>></span>
+				吾美珠宝玻璃种翡翠精雕观音吊坠
+			</div><!--goodsheader-->
+			<div class="goodsintroduce"><!--goodsintroduce-->
+				<div class="goodsimg" id="small"><!--goodsimg-->
+					<div class="mo"></div>
+					<img src="img/shangpinxiangqing/goods1.jpg"/>
+					<div class="smallframe" id="frame"><!--smallframe-->
+						
+					</div><!--smallframe-->
+					<div class="tobigimg" id="big"><!--tobigimg-->
+						<img id="big-img" src="img/shangpinxiangqing/goods1.jpg" alt="">
+					</div><!--tobigimg-->
+				</div><!--goodsimg-->
+
+				<script>
+					window.onload = function(){
+						var oSmall = document.getElementById("small");
+						var oBig = document.getElementById("big");
+						var oFrame = document.getElementById("frame");
+						var oSmall_img = oSmall.children[1];
+						var oBig_img = document.getElementById("big-img");
+						oSmall.onmouseover = function(){
+							oFrame.style.display = "block";
+							oBig.style.display = "block";
+							oSmall_img.style.opacity = "0.3";
+						}
+						oSmall.onmouseout = function(){
+							oFrame.style.display = "none";
+							oBig.style.display = "none";
+							oSmall_img.style.opacity = "1";
+						}
+						oSmall.onmousemove = function(event){
+							var e = event || window.event;
+							var nLeft = e.offsetX - 54;
+							var nTop = e.offsetY - 54;
+							
+							//最小边界
+							if(nLeft <= 0){
+								nLeft = 0;
+							}
+							if(nTop <= 0){
+								nTop = 0;
+							}
+
+							//最大边界
+							var maxLeft = oSmall.offsetWidth - oFrame.offsetWidth;
+							if(nLeft >= maxLeft){
+								nLeft = maxLeft;
+							}
+							var maxTop = oSmall.offsetHeight - oFrame.offsetHeight;
+							if(nTop >= maxTop){
+								nTop = maxTop;
+							}
+							
+							oFrame.style.left = nLeft + "px";
+							oFrame.style.top = nTop + "px";
+
+							//计算比例，让大图片根据比例移动距离
+							var perX = oBig.offsetWidth / oFrame.offsetWidth;
+							// console.log(perX);
+							oBig_img.style.left = -nLeft * perX + "px";
+							var perY = oBig.offsetHeight / oFrame.offsetHeight;
+							// console.log(perY);
+							oBig_img.style.top = -nTop * perY + "px";
+							oFrame.style.backgroundPosition = `${-nLeft}px ${-nTop}px`;
+						}
+					}
+				</script>
+				
+				<div class="goodssmall"><!--goodssmall-->
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<ul>
+						<li><img width="64" height="64" src="img/shangpinxiangqing/goodssmall1.jpg"/></li>
+						<li><img width="64" height="64" src="img/shangpinxiangqing/goodssmall2.jpg"/></li>
+						<li><img width="64" height="64" src="img/shangpinxiangqing/goodssmall3.jpg"/></li>
+						<li><img width="64" height="64" src="img/shangpinxiangqing/goodssmall4.jpg"/></li>
+						<li><img width="64" height="64" src="img/shangpinxiangqing/goodssmall5.jpg"/></li>
+					</ul>
+				</div><!--goodssmall-->
+				
+				<div class="goodsaddress"><!--goodsaddress-->
+					<p>商品编号：SD153069785847</p>
+					<a href="#"><i></i> 收藏<span>0</span></a>
+					
+					<div class="shareto"><!--shareto-->
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+					</div><!--shareto-->
+				</div><!--goodsaddress-->
+			</div><!--goodsintroduce-->
+			
+			<div class="goodscontent"><!--goodscontent-->
+				<h1>吾美珠宝玻璃种翡翠精雕观音吊坠</h1>
+				<h2>质地细腻，精美雕工</h2>
+				<h3>
+					九 藏 价：
+					<span class="goodsprice">¥ 500000.00</span>
+					<i>已售<span>0</span>套</i>
+				</h3>
+				<p>服&nbsp;&nbsp;务：由 <span>吾美珠宝</span> 发货，九藏商城提供售后，订单完成后1个工作日内发货。</p>
+				<div class="firstline"></div>
+				<div class="buynumber"><!--buynumber-->
+					<label>购买数量：</label>
+					<div class="selectnumber"><!--selectnumber-->
+						<input type="text" value="1"/>
+						<div class="numberchange">
+							<button></button>
+							<button></button>	
+						</div>
+					</div><!--selectnumber-->
+				</div><!--buynumber-->
+				<ul class="buynow"><!--buynow-->
+					<li>
+						<a href="#">
+							<span></span>
+							立即购买
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span></span>
+							加入购物车
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span></span>
+							点击咨询
+						</a>
+					</li>
+				</ul><!--buynow-->
+				<div class="secondline"></div>
+				<div class="servepromise"><!--servepromise-->
+					服务承诺：
+					<span></span>
+					7天内退换
+					<span></span>
+					假一赔二
+				</div><!--servepromise-->
+			</div><!--goodscontent-->
+		</div><!--goods-->
+		
+		<div class="relevantgoods"><!--relevantgoods-->
+			<h1>相关商品</h1>
+			<div class="relevantimg"><!--relevantimg-->
+				<div class="relevantleft"></div>
+				<div class="relevantright"></div>
+				<ul>
+					<li>
+						<a href="#"><img src="img/shangpinxiangqing/relevantgood1.jpg"/></a>
+						<h3><span>¥</span> 19800.00</h3>
+						<p><a href="#">吾美珠宝18K金镶嵌翡翠平安扣吊坠</a></p>
+					</li>
+					<li>
+						<a href="#"><img src="img/shangpinxiangqing/relevantgood2.jpg"/></a>
+						<h3><span>¥</span> 38400.00 <i></i></h3>
+						<p><a href="#">吾美珠宝天然翡翠平安扣吊坠</a></p>
+					</li>
+					<li>
+						<em>德国进</em>
+						<a href="#"><img src="img/shangpinxiangqing/relevantgood3.jpg"/></a>
+						<h3><span>¥</span> 2980.00</h3>
+						<p><a href="#">18K白金项链/项圈</a></p>
+					</li>
+					<li>
+						<em>精品</em>
+						<a href="#"><img src="img/shangpinxiangqing/relevantgood4.jpg"/></a>
+						<h3><span>¥</span> 110000.00</h3>
+						<p><a href="#">吾美珠宝18K金镶钻精雕翡翠观音吊坠</a></p>
+					</li>
+					<li>
+						<em>德国进</em>
+						<a href="#"><img src="img/shangpinxiangqing/relevantgood5.jpg"/></a>
+						<h3><span>¥</span> 6800.00</h3>
+						<p><a href="#">18K玫瑰金白金双色项链/项圈</a></p>
+					</li>
+					<li>
+						<em>特价</em>
+						<a href="#"><img src="img/shangpinxiangqing/relevantgood6.jpg"/></a>
+						<h3><span>¥</span> 12800.00</h3>
+						<p><a href="#">吾美珠宝18K金镶钻翡翠玻璃种戒指</a></p>
+					</li>
+				</ul>
+			</div><!--relevantimg-->
+		</div><!--relevantgoods-->
+		
+
+		<div class="bigpage"><!--bigpage-->
+			<div class="peoplelook"><!--peoplelook-->
+				<h1>大家都在看</h1>
+				<ul>
+					<li>
+						<a href="#"><img src="img/shangpinxiangqing/peoplelookimg1.jpg"/></a>
+						<h3><a href="#">吾美珠宝玻璃种翡翠精雕观音吊坠</a></h3>
+						<p><span>¥</span>500000.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/shangpinxiangqing/peoplelookimg2.jpg"/></a>
+						<h3><a href="#">吾美珠宝天然金发晶时尚戒指18K金镶钻</a></h3>
+						<p><span>¥</span>16800.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/shangpinxiangqing/peoplelookimg3.jpg"/></a>
+						<h3><a href="#">吾美珠宝18K金镶钻小飞机耳环</a></h3>
+						<p><span>¥</span>9800.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/shangpinxiangqing/peoplelookimg4.jpg"/></a>
+						<h3><a href="#">吾美珠宝18K金镶钻天然碧玺时尚戒指</a></h3>
+						<p><span>¥</span>13800.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/shangpinxiangqing/peoplelookimg5.jpg"/></a>
+						<h3><a href="#">吾美珠宝18K金镶钻天然水晶时尚戒指</a></h3>
+						<p><span>¥</span>7800.00</p>
+					</li>
+				</ul>
+			</div><!--peoplelook-->
+			
+			<div class="bigpageright"><!--bigpageright-->
+				<ul class="bigpagebtn" id="bigpagebtn"><!--bigpagebtn-->
+					<li class="active">藏品综述</li>
+					<li>售后服务</li>
+					<li>评价晒单 <span>0</span></li>
+					<li>服务中心</li>
+				</ul><!--bigpagebtn-->
+				<ul class="bigpagepart" id="bigpagepart"><!--bigpagepart-->
+					<li>
+						<ul class="bigpageimg"><!--bigpageimg-->
+							<li><img src="img/shangpinxiangqing/bigpageimg1.jpg"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg2.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg3.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg4.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg5.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg6.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg7.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg8.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg9.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg10.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg11.jpg"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg12.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg13.jpg"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg14.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg15.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg16.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg17.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg18.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg19.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg20.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg21.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg22.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg23.png"/></li>
+							<li><img src="img/shangpinxiangqing/bigpageimg24.jpg"/></li>
+						</ul><!--bigpageimg-->
+						
+						<div class="goodsassess"><!--goodsassess 商品评价-->
+							<div class="assesscontent"><!--assesscontent-->
+								<h1>商品评价</h1>
+								<a href="#">详情见会员章程</a>
+								<span>发表评价即可获得积分 10积分=1块钱 </span>
+							</div><!--assesscontent-->
+							
+							<div class="assesspraise"><!--assesspraise 好评部分-->
+								<div class="rate">
+									<h3>100%</h3>
+									<p>好评度</p>
+								</div>
+								<div class="praiselevel"><!--praiselevel-->
+									<dl>
+										<dt>好评<span>(100%)</span></dt>
+										<dd></dd>
+									</dl>
+									<dl>
+										<dt>中评<span>(0%)</span></dt>
+										<dd></dd>
+									</dl>
+									<dl>
+										<dt>差评<span>(0%)</span></dt>
+										<dd></dd>
+									</dl>
+								</div><!--praiselevel-->
+							</div><!--assesspraise 好评部分-->
+							
+							<div class="assesslist"><!--assesslist 评价列表-->
+								<ul class="assessclass" id="assessclass"><!--assessclass 评价分类-->
+									<li class="active">全部评价(0)</li>
+									<li>有晒单(0)</li>
+									<li>好评(0)</li>
+									<li>中评(0)</li>
+									<li>差评(0)</li>
+								</ul><!--assessclass 评价分类-->
+								
+								<ul class="assessdetail" id="assessdetail"><!--assessdetail 评价详情-->
+									<li>暂无评价</li>
+									<li>暂无评价</li>
+									<li>暂无评价</li>
+									<li>暂无评价</li>
+									<li>暂无评价</li>
+								</ul><!--assessdetail 评价详情-->
+							</div><!--assesslist 评价列表-->
+						</div><!--goodsassess 商品评价-->
+						
+						<div class="safetip"><!--safetip 安全提示-->
+							<dl>
+								<dt><i></i> 安全提示：</dt>
+								<dd>交易过程中请与您的专属顾问进行沟通，专属顾问的手机彩铃为九藏天下铃音，请注意识别，另外交易过程中不要随意接收可疑文件和点击不明来源的链接，付款前务必核实网站域名。</dd>
+							</dl>
+							<dl>
+								<dt><i></i>免责声明：</dt>
+								<dd>由于收藏品行业的特殊性，藏品价格波动较大，下单后的最终成交价以与专属顾问最后核定的价格为准，并需及时支付，延期付款需要重新核实价格。收藏品市场有风险，投资需谨慎！</dd>
+							</dl>
+						</div><!--safetip 安全提示-->
+					</li>
+					
+					<li>
+						<div class="shouhou"><!--shouhou-->
+							<h3>售后政策</h3>
+							<ul>
+								<li>1、如因产品质量问题、配货失误等原因造成的退换货申请，九藏商城承诺无条件退换货，物流成本由九藏承担。</li>
+								<li>2、由于您的收藏需求改变、或藏品价格波动产生的退换货申请，九藏将不予受理。</li>
+								<li>3、网站图片及信息仅供参考，因拍摄灯光及不同显示器色差等问题可能造成商品图片与实物差异，一切以实物为准。</li>
+								<li>4、礼包或套装中的商品不可以部分退货，有绑定赠品的主商品要将赠品一同进行退换货。 </li>
+							</ul>
+						</div><!--shouhou-->
+						
+						<div class="changjianwenti"><!--changjianwenti-->
+							<h3>常见问题</h3>
+							<dl>
+								<dt>咨询内容：在线支付支持哪些银行卡？支持大额支付吗？</dt>
+								<dd>九藏回答：在线支付支持以下网上银行方式：交通银行、中国银行、工商银行、建设银行、招商银行、农业银行、邮政储蓄。具体明细请参阅“在线支付”，网银支持大额支付。</dd>
+							</dl>
+							<dl>
+								<dt>咨询内容：九藏商城所售商品都是正品行货吗？有保真证明吗？</dt>
+								<dd>九藏回答：九藏商城所售商品全部为正品行货，绝大部分藏品附带专业机构的认证证书与保真证明，书画、玉器、古玩等多种门类产品可提供专业鉴赏家的鉴赏证明，每套藏品均配有九藏商城收藏票，确保藏品的质量。</dd>
+							</dl>
+							<dl>
+								<dt>咨询内容：购买的商品能开发票？如果是公司购买，可以开增值税发票吗？</dt>
+								<dd>九藏回答：由于收藏品的特殊性，您购买的商品均为不含税价格，需要发票的客户需另行加税。</dd>
+							</dl>
+							<dl>
+								<dt>咨询内容：下单多久后可以发货？</dt>
+								<dd>九藏回答：上午下单的客户一般下午发货，下午下单的客户一般隔日发货，个别缺货的情况会以短信或电话通知。</dd>
+							</dl>
+							<dl>
+								<dt>咨询内容：无货商品什么时候能到货？</dt>
+								<dd>九藏回答：九藏商城绝大多数商品都能保证供应充足，部分热销产品如遇暂时断货情况，客服会在第一时间与您取得联系，无货商品的到货时间根据配货情况而定，一般两个工作日内仍无法顺利配货的，产品部会及时将信息反馈至客户，以便客户决定是否继续等待配货，全程了解自己的订单状况。</dd>
+							</dl>
+							<dl>
+								<dt>咨询内容：快递费是多少？</dt>
+								<dd>九藏回答：凡是一次性购物满1000元快递费用由九藏商城承担，不满1000元的根据不同的快递公司费用会有所差异。</dd>
+							</dl>
+							<dl>
+								<dt>咨询内容：在线支付信用卡分期付款吗？如何申请？</dt>
+								<dd>九藏回答：我公司目前不支持信用卡分期付款，不支持赊销，如果有特殊要求请与相关客服人员联系。</dd>
+							</dl>
+							<dl>
+								<dt>咨询内容：下单时可以指定送货时间吗？</dt>
+								<dd>九藏回答：可以，您下单时可以选择“只工作日送货(双休日、假日不用送)”、“工作日、双休日与假日均可送货”、“只双休日、假日送货(工作日不用送)”等时间类型，并选择是否提前电话确认（有出差情况须作说明以便作相关物流安排）。另外，您还可以在订单备注里填写更具体的需求，我们会尽量满足您的要求。</dd>
+							</dl>
+							<dl>
+								<dt>咨询内容：收货时发现问题可以拒收吗？</dt>
+								<dd>九藏回答：在签收货物时如发现货物有损坏，请直接拒收退回我公司（货件如有异常，望您能积极与我公司配合，电话沟通，以便对此类事件能准确、及时作出判断），相关人员将为您重新安排发货。</dd>
+							</dl>
+							<dl>
+								<dt>咨询内容：如果我刚刚下单商品就降价了，能给我补偿吗？</dt>
+								<dd>九藏回答：由于收藏品价格的特殊性，商品价格每日都会有波动，下单后价格不作任何修改。</dd>
+							</dl>
+						</div><!--changjianwenti-->
+						
+					</li>
+					<li>
+						<div class="goodsassess"><!--goodsassess 商品评价-->
+							<div class="assesscontent"><!--assesscontent-->
+								<h1>商品评价</h1>
+								<a href="#">详情见会员章程</a>
+								<span>发表评价即可获得积分 10积分=1块钱 </span>
+							</div><!--assesscontent-->
+							
+							<div class="assesspraise"><!--assesspraise 好评部分-->
+								<div class="rate">
+									<h3>100%</h3>
+									<p>好评度</p>
+								</div>
+								<div class="praiselevel"><!--praiselevel-->
+									<dl>
+										<dt>好评<span>(100%)</span></dt>
+										<dd></dd>
+									</dl>
+									<dl>
+										<dt>中评<span>(0%)</span></dt>
+										<dd></dd>
+									</dl>
+									<dl>
+										<dt>差评<span>(0%)</span></dt>
+										<dd></dd>
+									</dl>
+								</div><!--praiselevel-->
+							</div><!--assesspraise 好评部分-->
+							
+							<div class="assesslist"><!--assesslist 评价列表-->
+								<ul class="assessclass" id="assessclass"><!--assessclass 评价分类-->
+									<li class="active">全部评价(0)</li>
+									<li>有晒单(0)</li>
+									<li>好评(0)</li>
+									<li>中评(0)</li>
+									<li>差评(0)</li>
+								</ul><!--assessclass 评价分类-->
+								
+								<ul class="assessdetail" id="assessdetail"><!--assessdetail 评价详情-->
+									<li class="active">暂无评价</li>
+									<li>暂无评价</li>
+									<li>暂无评价</li>
+									<li>暂无评价</li>
+									<li>暂无评价</li>
+								</ul><!--assessdetail 评价详情-->
+							</div><!--assesslist 评价列表-->
+						</div><!--goodsassess 商品评价-->
+					</li>
+					<li>
+						<div class="servecenter"><!--servecenter-->
+							<ul>
+								<li>
+									<i></i>
+									<a href="#">鉴定</a>
+									<p>藏品鉴定</p>
+								</li><li>
+									<i></i>
+									<a href="#">百科</a>
+									<p>藏品百科</p>
+								</li>
+								<li>
+									<i></i>
+									<a href="#">收购</a>
+									<p>藏品回收</p>
+								</li>
+								<li>
+									<i></i>
+									<a href="#">报价</a>
+									<p>藏品报价</p>
+								</li>
+								<li>
+									<i></i>
+									<a href="#">文交所</a>
+									<p>藏品交易</p>
+								</li>
+							</ul>
+							
+							<h3>联系客服</h3>
+							<dl>
+								<dt></dt>
+								<dd><a href="#">在线客服</a></dd>
+								<dd><p>通过在线解答的方式为您提供咨询服务<br />工作时间：8:30-18:00(周一至周日)</p></dd>
+							</dl>
+							<dl>
+								<dt></dt>
+								<dd><a href="#">免费电话</a></dd>
+								<dd><p>企业热线：<span>400 0526 999</span><br />工作时间：8:30-18:00(周一至周日)</p></dd>
+							</dl>
+							
+							
+						</div><!--servecenter-->
+					</li>
+					
+
+				</ul><!--bigpagepart-->			
+			</div><!--bigpageright-->
+		</div><!--bigpage-->
+		
+		<script src="js/Tab.js"></script>
+		<script type="text/javascript">
+			var pageTab = new Tab();
+			pageTab.init("#bigpagebtn li","#bigpagepart>li");
+			var accessTab = new Tab();
+			accessTab.init("#assessclass li","#assessdetail li");
+		</script>
+		
+		
+		
+		
+			<div class="bottom-bg"><!--bottom-bg-->
+		<div class="headerpart"><!--headerpart-->
+				<ul class="zhen">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				
+				<div class="serve"><!--serve-->
+					<dl>
+						<dt>物流配送</dt>
+						<dd><a href="#">上门自提</a></dd>
+						<dd><a href="#">物流配送</a></dd>
+						<dd><a href="#">特快专递</a></dd>
+						<dd><a href="#">九藏直达</a></dd>
+					</dl>
+					
+					<dl>
+						<dt>支付方式</dt>
+						<dd><a href="#">在线支付</a></dd>
+						<dd><a href="#">公司转账</a></dd>
+						<dd><a href="#">发票制度</a></dd>
+					</dl>
+					
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="#">退换货制度</a></dd>
+						<dd><a href="#">退换货流程</a></dd>
+						<dd><a href="#">价格说明</a></dd>
+						<dd><a href="#">退款说明</a></dd>
+					</dl>
+					
+					<dl>
+						<dt>购物指南</dt>
+						<dd><a href="#">购物流程</a></dd>
+						<dd><a href="#">会员介绍</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+					</dl>
+					
+					<dl>
+						<dt>藏品代销</dt>
+						<dd><a href="#">藏品代销</a></dd>
+					</dl>
+					
+					<ul>
+						<li>
+							免费热线：<span>4000-526-999</span>
+						</li>
+						<li>
+							售后服务：<span>4006-778-699</span>
+						</li>
+					</ul>
+				</div><!--serve-->
+			
+				
+				<div class="friendlylink"><!--friendlylink-->
+					<span></span>
+					<h3>友情链接</h3>
+					<p>
+						<a href="#">山东教师考试网</a>
+						<a href="#">结婚对戒</a>
+						<a href="#">IPO上市</a>
+						<a href="#">深圳珠宝网</a>
+						<a href="#">装修网</a>
+						<a href="#">山东教师考试网</a>
+						<a href="#">珠宝网上商城</a>
+						<a href="#">新东方托福培训</a>
+						<a href="#">九藏天下</a>
+						<a href="#">好捡漏</a>
+						<a href="#">九藏回收</a>
+						<a href="#">钻石戒指</a>
+						<a href="#">中国珠宝招商网</a>
+						<a href="#">佐卡伊珠宝网</a>
+						<a href="#">B2B供应商</a>
+						<a href="#">和田玉</a>
+						<a href="#">文玩部落</a>
+						<a href="#">翡翠</a>
+						<a href="#">点购收藏网</a>
+						<a href="#">今日热点新闻</a>
+						<a href="#">时尚品牌网</a>
+						<a href="#">艺术网</a>
+						<a href="#">中国和田玉网</a>
+						<a href="#">玉器鉴定</a>
+						<a href="#">钻戒定制</a>
+						<a href="#">教育培训</a>
+						<a href="#">画画网</a>
+						<a href="#">邮票价格查询</a>
+						<a href="#">批发网</a>
+						<a href="#">发现值得买</a>
+						<a href="#">华夏收藏网</a>
+						<a href="#">99艺术网</a>
+					</p>
+				</div><!--friendlylink-->
+				
+				<div class="bottom"><!--bottom-->
+					<ul class="aboutus"><!--aboutus-->
+						<li>
+							<a href="#">关于我们</a>
+							<span>|</span>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+							<span>|</span>
+						</li>
+						<li>
+							<a href="#">文化理念</a>
+							<span>|</span>
+						</li>
+						<li>
+							<a href="#">诚征英才</a>
+							<span>|</span>
+						</li>
+						<li>
+							<a href="#">法律支持</a>
+							<span>|</span>
+						</li>
+						<li>
+							<a href="#">九藏大事记</a>
+							<span>|</span>
+						</li>
+						<li>
+							<a href="#">艺术家入住</a>
+						</li>
+					</ul><!--aboutus-->
+					
+					<p>
+						Copyright © 2009-2016
+						<a href="#">北京九藏天下文化发展有限公司</a>
+						 版权所有
+					</p>
+					<p>
+              			ICP备案证书号:
+              			<a href="#">10002630</a>
+              			<span>|</span>
+              			 经营流通人民币许可证号：2011-019
+					</p>
+					<p>
+						电信与信息服务业业务经营许可证：京ICP证160176号
+						<span>|</span>
+						网络文化经营许可证：京网文（2015）0188-118号
+						<span>|</span>
+						北京市公安局朝阳分局备案编号11010502019495
+					</p>
+					
+					<div class="bottomimg"><!--bottomimg-->
+						<a href="#"><img src="img/jingicp.jpg"/></a>
+						<a href="#"><img src="img/cft.jpg"/></a>
+						<a href="#"><img src="img/zfb.jpg"/></a>
+						<a href="#"><img src="img/cywl.jpg"/></a>
+						<a href="#"><img src="img/360wz.jpg"/></a>
+					</div><!--bottomimg-->
+				</div><!--bottom-->
+		</div><!--headerpart-->
+	</div><!--bottom-bg-->
+	</body>
+</html>

@@ -1,0 +1,123 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: "宋体";
+}
+
+fieldset,img {
+	border: none;
+}
+
+address,caption,cite,code,dfn,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ul,ol,li {
+	list-style: none;
+}
+ 
+a {
+	font-size: 12px;
+	color: #282828;
+	text-decoration: none;
+}
+
+/*****************************************logo****************************************************/
+.logo{width: 990px;height: 111px;margin: 0 auto;}
+.logo img{margin: 20px 10px 20px 0;float: left;}
+.logo b{font-size: 24px;color: #000;float: left;margin-top: 32px;}
+
+/*****************************************loginbanner****************************************************/
+
+
+.loginbaner-bg{width: 100%;background: #de3030;}
+
+.loginbanner{width: 990px;height: 600px;margin: 0 auto;position: relative;}
+.loginbanner .loginpart{position: absolute;width: 380px;height: 402px;left: 50%;top: 50%;background: #fff;margin-left: 110px;margin-top: -200px;border: 1px solid #dddddd;}
+.loginbanner .loginpart .loginbtn{width: 380px;height: 49px;}
+.loginpart .loginbtn li{width: 190px;height: 48px;width: 50%;float: left;margin-left: -1px;border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;line-height: 48px;background: #f5f5f5;color: #999;text-align: center;font-size: 16px;cursor: pointer;}
+.loginpart .loginbtn li.cur{background: #fff;color: #333;border-bottom: 1px solid #fff;}
+.loginpart .loginform{width: 380px;height: 323px;overflow: hidden;}
+.loginpart .loginform .loginform1{width: 380px;height: 238px;}
+.loginpart .loginform .loginform1 dl{width: 302px;height: 223px;margin: 10px auto 5px;}
+.loginpart .loginform .loginform1 dd:nth-child(1),.loginpart .loginform .loginform1 dd:nth-child(2){width: 302px;height: 42px;border: 1px solid #dddddd;margin: 15px 0 12px 0;}
+.loginpart .loginform .loginform1 dd span{display: inline-block;width: 42px;height: 42px;background: #f6f6f6 url(../img/imgs.png) no-repeat -290px -370px;float: left;}
+.loginpart .loginform .loginform1 dd:nth-child(2) span{background: #f6f6f6 url(../img/imgs.png) no-repeat -290px -425px;}
+.loginpart .loginform .loginform1 dd:nth-child(1) input,.loginpart .loginform .loginform1 dd:nth-child(2) input{border: none;height: 40px; width: 257px;float: left;padding-left: 3px;outline: medium;}
+.loginpart .loginform .loginform1 dd button{width: 302px;height: 48px;background: #df3033;border: none;color: #fff;font-size: 18px;}
+.loginpart .loginform .loginform1 dd:nth-child(4){margin-top: 16px;font-size: 14px;}
+.loginpart .loginform .loginform1 dd:nth-child(4) input{float: left;}
+.loginpart .loginform .loginform1 dd:nth-child(4) p{float: right;}
+.loginpart .loginform .loginform1 dd:nth-child(4) p a{color: #005aa0;font-size: 14px;}
+.loginpart .loginform .loginform1 dd:nth-child(4) p a:hover{color: #e60012;}
+.loginpart .loginform .qqlogin{margin: 10px 40px;}
+.loginpart .loginform .qqlogin h3{font-weight: normal;color: #333333;}
+.loginpart .loginform .qqlogin img{margin: 5px;}
+
+/**************************************foot*******************************************************/
+.foot{width: 990px;height: 85px;overflow: hidden;margin: 10px auto 0;}
+.foot ul{line-height: 30px;margin-left: 184px;height: 30px;}
+.foot ul li{padding: 0 15px;float: left;}
+.foot ul li a{color: #2f2d2d;float: left;}
+.foot ul li a:hover{color: #e60012;}
+.foot ul li span{display: inline-block;width: 0;height: 14px;float: right;margin-left: 15px;color: #ad99ad;}
+
+.foot p{text-align: center;margin-top: 10px;color: #999999;}
+
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
